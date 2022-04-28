@@ -1,0 +1,561 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- подключение Css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="{%static 'css/style.css'%}" />
+    <!-- подключение Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- подключение Swiper -->
+
+    <title>Title</title>
+  </head>
+
+  <body>
+    <section class="header_socials">
+      <div class="header_socials__conainer _container">
+        <div class="header_socials_info">
+          <div class="header_socials_tel">
+            <a href="tel:+77768487837">
+              <img
+                src="{% static 'img/header_socials/phone_icon.png'%}"
+                alt=""
+              />
+              +7768487837
+            </a>
+          </div>
+          <div class="header_socials_gmail">
+            <a href="gmail:college.site@jihc.kz">
+              <img
+                src="{% static 'img/header_socials/phone_gmail.png'%}"
+                alt=""
+              />
+              college.site@jihc.kz
+            </a>
+          </div>
+        </div>
+        <div class="header_socials_icons">
+          <a href="header_socials-link">
+            <span>
+              <img
+                src="{% static 'img/header_socials/icon_facebook.png' %}"
+                alt=""
+              />
+            </span>
+          </a>
+          <a href="header_socials-link">
+            <span>
+              <img
+                src="{% static 'img/header_socials/icon_whatsapp.png'%}"
+                alt=""
+              />
+            </span>
+          </a>
+          <a href="header_socials-link">
+            <span>
+              <img
+                src="{% static 'img/header_socials/icon_instagram.png'%}"
+                alt=""
+              />
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Header Section -->
+
+    <header class="header">
+      <div class="header__container">
+        <section class="wrapper">
+          <section class="header-item-top">
+            <div class="header-item-top__container _container">
+              <div class="header__language">
+                <a href="" class="header__language-link">KZ</a>
+                <a href="" class="header__language-link">RU</a>
+                <a href="" class="header__language-link">EN</a>
+              </div>
+
+              <nav class="menu" id="menu ">
+                <div class="menu-mobile-header">
+                  <button type="button" class="menu-mobile-arrow">
+                    <i class="fas fa-angle-left"></i>
+                  </button>
+                  <div class="menu-mobile-title"></div>
+                  <button type="button" class="menu-mobile-close">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <ul class="menu-section">
+                  <li class="menu-item-has-children _hidden">
+                    <a href="index.html" class="has-children__link">Басты</a>
+                  </li>
+                  <li class="menu-item-has-children _hidden">
+                    <a href="college.html" class="has-children__link"
+                      >Колледж</a
+                    >
+                    <button type=" button" class="has-children__btn">
+                      <i class="fas fa-angle-down"></i>
+                    </button>
+                    <div class="menu-subs menu-column">
+                      <ul>
+                        {% for el in navbar2 %}
+                        <li><a href="#">{{el.title}}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu-item-has-children _hidden">
+                    <a href="admission.html" class="has-children__link"
+                      >Қабылдау</a
+                    >
+                    <button type=" button" class="has-children__btn">
+                      <i class="fas fa-angle-down"></i>
+                    </button>
+                    <div class="menu-subs menu-column">
+                      <ul>
+                        {% for el in navbar4 %}
+                        <li><a href="#">{{el.title}}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu-item-has-children _hidden">
+                    <a href="#" class="has-children__link"
+                      >Білім бағдарламалар</a
+                    >
+                    <button class="has-children__btn">
+                      <i class="fas fa-angle-down"></i>
+                    </button>
+                    <div class="menu-subs menu-column">
+                      <ul>
+                        {% for el in navbar %}
+                        <li><a href="#">{{el.title}}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu-item-has-children _hidden">
+                    <a href="for_students.html" class="has-children__link"
+                      >Студенттерге</a
+                    >
+                    <button class="has-children__btn">
+                      <i class="fas fa-angle-down"></i>
+                    </button>
+                    <div class="menu-subs menu-column">
+                      <ul>
+                        {% for el in navbar6 %}
+                        <li><a href="#">{{el.title}}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu-item-has-children _hidden">
+                    <a href="{% url 'for_parents'%}" class="has-children__link"
+                      >Ата-аналарға</a
+                    >
+                    <button class="has-children__btn">
+                      <i class="fas fa-angle-down"></i>
+                    </button>
+                    <div class="menu-subs menu-column">
+                      <ul>
+                        {% for el in navbar5 %}
+                        <li><a href="#">{{el.title}}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu-item-has-children _hidden">
+                    <a href="#" class="has-children__link">СУНЦ "Digitarium"</a>
+                    <button class="has-children__btn">
+                      <i class="fas fa-angle-down"></i>
+                    </button>
+                    <div class="menu-subs menu-column">
+                      <ul>
+                        {% for el in navbar1 %}
+                        <li><a href="#">{{el.title}}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="" class="has-children__link">Түлектерге</a>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="" class="has-children__link">Күнтізбе</a>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="{% url 'contacts'%}" class="has-children__link"
+                      >Кері байланыс</a
+                    >
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="" class="has-children__link">Жұмыс берушілерге</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="header_burger">
+                <button type="button" class="menu-mobile-toggle">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- Navbar Section -->
+          <div class="header-item-menu _container">
+            <div class="overlay"></div>
+            <nav class="menu" id="menu">
+              <div class="logo">
+                <a href="{% url 'index'%}">
+                  <img src="{% static 'img/header/header_logo.png'%}" alt="" />
+                </a>
+              </div>
+              <ul class="menu-section">
+                <li class="menu-item-has-children">
+                  <a href="college.html" class="has-children__link">Колледж</a>
+                  <button type=" button" class="has-children__btn">
+                    <i class="fas fa-angle-down"></i>
+                  </button>
+                  <div class="menu-subs menu-column">
+                    <ul>
+                      {% for el in navbar2 %}
+                      <li><a href="#">{{el.title}}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="admission.html" class="has-children__link"
+                    >Қабылдау</a
+                  >
+                  <button type=" button" class="has-children__btn">
+                    <i class="fas fa-angle-down"></i>
+                  </button>
+                  <div class="menu-subs menu-column">
+                    <ul>
+                      {% for el in navbar4 %}
+                      <li><a href="#">{{el.title}}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#" class="has-children__link">Білім бағдарламалар</a>
+                  <button class="has-children__btn">
+                    <i class="fas fa-angle-down"></i>
+                  </button>
+                  <div class="menu-subs menu-column">
+                    <ul>
+                      {% for el in navbar %}
+                      <li><a href="#">{{el.title}}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="{% url 'for_students'%}" class="has-children__link"
+                    >Студенттерге</a
+                  >
+                  <button class="has-children__btn">
+                    <i class="fas fa-angle-down"></i>
+                  </button>
+                  <div class="menu-subs menu-column">
+                    <ul>
+                      {% for el in navbar6 %}
+                      <li><a href="#">{{el.title}}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="{% url 'for_parents'%}" class="has-children__link"
+                    >Ата-аналарға</a
+                  >
+                  <button class="has-children__btn">
+                    <i class="fas fa-angle-down"></i>
+                  </button>
+                  <div class="menu-subs menu-column">
+                    <ul>
+                      {% for el in navbar5 %}
+                      <li><a href="#">{{el.title}}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#" class="has-children__link">СУНЦ "Digitarium"</a>
+                  <button class="has-children__btn">
+                    <i class="fas fa-angle-down"></i>
+                  </button>
+                  <div class="menu-subs menu-column">
+                    <ul>
+                      {% for el in navbar1 %}
+                      <li><a href="#">{{el.title}}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <div class="intro">
+      <div class="intro__container">
+        <div class="intro__body">
+          <div class="intro_sliper-container">
+            <div class="intro_swiper-container">
+              <div class="swiper swiper_slider-intro">
+                <div class="swiper-wrapper">
+                  {% for slide in slider %}
+                  <div class="swiper-slide">
+                    <img src="{{slide.img.url}}" alt="" />
+                    <div class="slide-bg"></div>
+                    <a href="" class="swiper-slide-link"
+                      >{{slide.description}}</a
+                    >
+                  </div>
+                  {% endfor %}
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="features">
+      <div class="features__container _container">
+        <div class="features_content">
+          <div class="features__title">Көзқарастар мен мақсаттар</div>
+          <div class="features__item">
+            <div class="features__item-title">Сабақ беру қөзқарастарымыз</div>
+            <div class="features__item-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco
+            </div>
+          </div>
+          <div class="features__item">
+            <div class="features__item-title">Негізгі мақсатымыз</div>
+            <div class="features__item-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </div>
+        <div class="features_images_block">
+          <div class="features_image-item">
+            <div class="features_image">
+              <img
+                src="{% static 'img/features-1_img.svg'%}"
+                alt="features_image-1"
+              />
+            </div>
+            <div class="features_image-info">Шығармашылық</div>
+          </div>
+          <div class="features_image-item">
+            <div class="features_image">
+              <img
+                src="{% static 'img/features-2_img.svg'%}"
+                alt="features_image-1"
+              />
+            </div>
+            <div class="features_image-info">Биік мақсаттар</div>
+          </div>
+          <div class="features_image-item">
+            <div class="features_image">
+              <img
+                src="{% static 'img/features-3_img.svg'%}"
+                alt="features_image-1"
+              />
+            </div>
+            <div class="features_image-info">Принциптер мен этика</div>
+          </div>
+          <div class="features_image-item">
+            <div class="features_image">
+              <img
+                src="{% static 'img/features-4_img.svg'%}"
+                alt="features_image-1"
+              />
+            </div>
+            <div class="features_image-info">Бәсекелестік</div>
+          </div>
+          <div class="features_image-item">
+            <div class="features_image">
+              <img
+                src="{% static 'img/features-5_img.svg'%}"
+                alt="features_image-1"
+              />
+            </div>
+            <div class="features_image-info">Таңдауға көмек</div>
+          </div>
+          <div class="features_image-item">
+            <div class="features_image">
+              <img
+                src="{% static 'img/features-6_img.svg'%}"
+                alt="features_image-1"
+              />
+            </div>
+            <div class="features_image-info">Әр жерден келген мұғалімдер</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="college__about">
+      <div class="college__about__container _container">
+        <div class="college__about-list">
+          {% for item in aboutNumbers%}
+          <div class="college__about-item">
+            <div class="college__about-title">{{item.number}}</div>
+            <div class="college__about-subtitle">{{item.title}}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="college">
+      <div class="college__container _container">
+        <div class="college__wrapper home_college__list">
+          <div class="college__item _normal_item">
+            <div class="college__item-info">
+              <div class="college__item-title">{{aboutPost.title}}</div>
+              <div class="college__item-text main_text">
+                {{aboutPost.description}}
+              </div>
+              <button class="college__item-button main_btn">Read more</button>
+            </div>
+            <div class="college__item-img">
+              <img src="{{aboutPost.img.url}}" alt="" />
+            </div>
+          </div>
+          <div class="college__item _reverse_item">
+            <div class="college__item-info">
+              <div class="college__item-title">{{aboutPost2.title}}</div>
+              <div class="college__item-text main_text">
+                {{aboutPost2.description}}
+              </div>
+              <button class="college__item-button main_btn">Read more</button>
+            </div>
+            <div class="college__item-img">
+              <img src="{{aboutPost2.img.url}}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="add_info__college">
+      <div class="add_info__college__container _container">
+        <div class="college__add-content">
+          <div class="add_info__college-title">{{university.title}}</div>
+          <div class="add_info__college-text main_text">
+            {{university.description}}
+          </div>
+          <button class="add_info__college-btn main_btn">Read more</button>
+        </div>
+        <div class="add_info__college-logo">
+          <img src="{% static 'img/main_logo.png'%}" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="features_cards">
+      <div class="features_cards__container _container">
+        <div class="features__body">
+          <div class="features__cards-title">Title</div>
+          <div class="features_cards__row">
+            {% for el in mainPost %}
+            <div class="features_card">
+              <div class="features_card-img">
+                <img src="{{el.img.url}}" alt="" />
+              </div>
+              <div class="features_card-info">
+                <p>{{el.description}}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="footer__container _container">
+        <div class="footer__menu">
+          <div class="footer__logo">
+            <a href="index.html">
+              <img src="{% static 'img/footer/footer_logo.png'%}" alt="" />
+            </a>
+          </div>
+          <div class="footer__info">
+            1993-2022 Жамбыл Инновациялық Жоғары Колледжі
+          </div>
+          <div class="footer__info">
+            ҚР, Жамбыл Облысы, Тараз Қаласы, Пушкин көшесі, 154
+          </div>
+          <div class="footer__info">
+            Колледж қабылдау бөлімінің байланыс телефоны: +77262430713,
+            +77477802727
+          </div>
+        </div>
+        <div class="footer__socials">
+          <div class="footer__socials-copyright">
+            ©2022 JIHC. Барлық құқықтар сақталған.
+          </div>
+          <div class="footer__socials-list">
+            <a href="404_error.html" class="footer__socials-link">
+              <span>
+                <img
+                  src="{% static 'img/header_socials/icon_facebook.png'%}"
+                  alt=""
+                />
+              </span>
+            </a>
+            <a href="speciallity.html" class="footer__socials-link">
+              <span>
+                <img
+                  src="{% static 'img/header_socials/icon_whatsapp.png'%}"
+                  alt=""
+                />
+              </span>
+            </a>
+            <a href="" class="footer__socials-link">
+              <span>
+                <img
+                  src="{% static 'img/header_socials/icon_instagram.png'%}"
+                  alt=""
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/script.js'%}"></script>
+  </body>
+</html>
