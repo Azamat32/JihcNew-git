@@ -839,7 +839,6 @@ img {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  vertical-align: top;
   -o-object-fit: contain;
   object-fit: cover;
 }
@@ -2602,4 +2601,24 @@ img {
   line-height: 25px;
   color: #fff;
   margin-left: 15px;
+}
+.speciallity_sinlge-header {
+  margin-top: 100px;
+  margin-bottom: 70px;
+}
+
+.speciallity_sinlge-img img{
+    width: 1200px;
+    margin: 0 auto;
+    height: 650px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.speciallity_sinlge-title {
+  margin-bottom: 30px;
+}
+
+.speciallity_sinlge-text {
+  padding-bottom: 20px;
 }

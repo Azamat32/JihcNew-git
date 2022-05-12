@@ -1,0 +1,75 @@
+{% extends "base.html" %} {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- подключение Css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- подключение Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- подключение Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <title>Title</title>
+  </head>
+
+  <body>
+    {%block content%}
+    <section class="college_history">
+      <div class="college_history__container _container">
+        <div class="college_history__list">
+          <div class="college_history__item _normal_item">
+            <div class="college_history__content">
+              <div class="college_history-title">1993</div>
+              <div class="college_history-text main_text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco
+              </div>
+            </div>
+            <div class="college_history__logo">
+              <img src="img/error_img.png" alt="" />
+            </div>
+          </div>
+          <div class="college_history__item _reverse_item">
+            <div class="college_history__content">
+              <div class="college_history-title">19XX</div>
+              <div class="college_history-text main_text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco
+              </div>
+            </div>
+            <div class="college_history__logo">
+              <img src="img/error_img.png" alt="" />
+            </div>
+          </div>
+          <div class="college_history__item _normal_item">
+            <div class="college_history__content">
+              <div class="college_history-title">20XX</div>
+              <div class="college_history-text main_text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco
+              </div>
+            </div>
+            <div class="college_history__logo">
+              <img src="img/error_img.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {%endblock%}
+  </body>
+</html>

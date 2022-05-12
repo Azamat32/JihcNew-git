@@ -2,6 +2,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import  *
 
+def basePage(request):
+   navbarspecial = NavbarDropdownSpeciality.objects.all()
+   navbardigit = NavbarDropdownDigitarium.objects.all()
+   navbarcolledge = NavbarDropdownColledge.objects.all()
+   navbaraccept = NavbarDropdownAccept.objects.all()
+   navbarspecialparents = NavbarDropdownParents.objects.all()
+   navbarspecialstudents = NavbarDropdownStudents.objects.all()
+
+   return render(request, 'base.html', {"navbar": navbarspecial,'navbar1':navbardigit,'navbar2':navbarcolledge,'navbar3':navbarcolledge,'navbar4':navbaraccept,'navbar5':navbarspecialparents,'navbar6': navbarspecialstudents})
 
 def index(request):
    slider = SwiperImg.objects.order_by('-id')[:6]
@@ -41,5 +50,46 @@ def for_parentsPage(request):
    return render(request,'for_parents.html',{"navbar": navbarspecial,'navbar1':navbardigit,'navbar2':navbarcolledge,'navbar3':navbarcolledge,'navbar4':navbaraccept,'navbar5':navbarspecialparents,'navbar6': navbarspecialstudents, 'forparents': forparents})
 
 def contacts_page(request):
+   navbarspecial = NavbarDropdownSpeciality.objects.all()
+   navbardigit = NavbarDropdownDigitarium.objects.all()
+   navbarcolledge = NavbarDropdownColledge.objects.all()
+   navbaraccept = NavbarDropdownAccept.objects.all()
+   navbarspecialparents = NavbarDropdownParents.objects.all()
+   navbarspecialstudents = NavbarDropdownStudents.objects.all()
 
-   return render(request,'contacts.html')
+   return render(request,'contacts.html',{"navbar": navbarspecial,'navbar1':navbardigit,'navbar2':navbarcolledge,'navbar3':navbarcolledge,'navbar4':navbaraccept,'navbar5':navbarspecialparents,'navbar6': navbarspecialstudents})
+
+def speciallity_page(request):
+   navbarspecial = NavbarDropdownSpeciality.objects.all()
+   navbardigit = NavbarDropdownDigitarium.objects.all()
+   navbarcolledge = NavbarDropdownColledge.objects.all()
+   navbaraccept = NavbarDropdownAccept.objects.all()
+   navbarspecialparents = NavbarDropdownParents.objects.all()
+   navbarspecialstudents = NavbarDropdownStudents.objects.all()
+   return render(request,'speciallity.html',{"navbar": navbarspecial,'navbar1':navbardigit,'navbar2':navbarcolledge,'navbar3':navbarcolledge,'navbar4':navbaraccept,'navbar5':navbarspecialparents,'navbar6': navbarspecialstudents})
+
+def admission_page(request):
+   navbarspecial = NavbarDropdownSpeciality.objects.all()
+   navbardigit = NavbarDropdownDigitarium.objects.all()
+   navbarcolledge = NavbarDropdownColledge.objects.all()
+   navbaraccept = NavbarDropdownAccept.objects.all()
+   navbarspecialparents = NavbarDropdownParents.objects.all()
+   navbarspecialstudents = NavbarDropdownStudents.objects.all()
+   return render(request,'admission.html',{"navbar": navbarspecial,'navbar1':navbardigit,'navbar2':navbarcolledge,'navbar3':navbarcolledge,'navbar4':navbaraccept,'navbar5':navbarspecialparents,'navbar6': navbarspecialstudents})
+def college(request):
+   navbarspecial = NavbarDropdownSpeciality.objects.all()
+   navbardigit = NavbarDropdownDigitarium.objects.all()
+   navbarcolledge = NavbarDropdownColledge.objects.all()
+   navbaraccept = NavbarDropdownAccept.objects.all()
+   navbarspecialparents = NavbarDropdownParents.objects.all()
+   navbarspecialstudents = NavbarDropdownStudents.objects.all()
+   return render(request,'college.html',{"navbar": navbarspecial,'navbar1':navbardigit,'navbar2':navbarcolledge,'navbar3':navbarcolledge,'navbar4':navbaraccept,'navbar5':navbarspecialparents,'navbar6': navbarspecialstudents})
+
+def college_historyPage(request):
+   navbarspecial = NavbarDropdownSpeciality.objects.all()
+   navbardigit = NavbarDropdownDigitarium.objects.all()
+   navbarcolledge = NavbarDropdownColledge.objects.all()
+   navbaraccept = NavbarDropdownAccept.objects.all()
+   navbarspecialparents = NavbarDropdownParents.objects.all()
+   navbarspecialstudents = NavbarDropdownStudents.objects.all()
+   return render(request,'college_history.html',{"navbar": navbarspecial,'navbar1':navbardigit,'navbar2':navbarcolledge,'navbar3':navbarcolledge,'navbar4':navbaraccept,'navbar5':navbarspecialparents,'navbar6': navbarspecialstudents})
